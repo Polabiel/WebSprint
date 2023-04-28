@@ -55,14 +55,15 @@ main {
 .img {
     max-width: 650px;
     max-height: 500px;
-    margin: 0 3% 0 auto;
+    margin: auto 10px;
 }
 
 .subs {
     display: flex;
-    margin: 0 0 0 3%;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+    margin: 25px;
+    align-items: center;
     padding: 20px 20px;
 }
 
@@ -75,6 +76,7 @@ main {
     max-width: 450px;
     text-align: justify;
 }
+
 .subs h1 {
     font-weight: 800;
     margin: 20px 0;
@@ -132,8 +134,8 @@ form p {
     outline: none;
 }
 
-.input:focus ~ label,
-.input:valid ~ label{
+.input:focus~label,
+.input:valid~label {
     transform: translateY(-25px);
     font-size: 12px;
     color: var(--main-color);
@@ -143,11 +145,32 @@ form p {
     width: 100%;
     text-align: center;
 }
-form input[type=submit]{
+
+form input[type=submit] {
     padding: 10px 40px;
     border: 0;
     border-radius: 8px;
     background-color: var(--main-color-black);
     color: var(--main-color-text);
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color-black);
+    color: var(--main-color-text);
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--main-constrast-color);
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
 }
