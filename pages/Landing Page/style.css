@@ -60,11 +60,12 @@ main {
 
 .subs {
     display: flex;
-    justify-content: space-between;
     flex: 1;
-    margin: 25px;
-    align-items: center;
+    margin: 5vh 15px;
     padding: 20px 20px;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
 }
 
 .subs span {
