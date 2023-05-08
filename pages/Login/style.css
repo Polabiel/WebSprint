@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --main-color-once: #F39237;
+    --main-color-twice: #f3b137;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +16,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: linear-gradient(45deg, var(--main-color-once), var(--main-color-twice));
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vh;
@@ -43,7 +48,7 @@ main h2::before{
     bottom: 0px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: linear-gradient(45deg, var(--main-color-once), var(--main-color-twice));
 }
 
 form {
@@ -56,6 +61,7 @@ form {
 }
 
 .input-field input {
+    padding: 0.5rem;
     outline: none;
     font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.7);
@@ -68,7 +74,7 @@ form {
 form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
-    background: linear-gradient(to left, #8e2de2, #4a00e0);
+    background: linear-gradient(to left, var(--main-color-once), var(--main-color-twice));
     cursor: pointer;
     color: white;
     font-size: 0.9rem;
@@ -79,7 +85,7 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, var(--main-color-once), var(--main-color-twice));
 }
 
 footer {
@@ -94,19 +100,50 @@ footer span {
     text-align: center;
 }
 
-footer .social-fields {
-    padding: 0.4rem;
+footer .social-fields a {
+    padding: 10px;
     border-radius: 8px;
     font-size: 0.85rem;
     width: 100%;
+    text-decoration: none;
+    color: white;
     cursor: pointer;
 }
 
-.social-fields-twitter a {
-    text-decoration: none;
-    color: white;
+footer .social-fields{
+    margin: 10px 0;
+    border-radius: 8px;
 }
 
 footer .social-fields-twitter {
     background: linear-gradient(to right, #56a7f2, #468aca);
+    transition: all 0.3s ease;
+}
+
+footer .social-fields-twitter:hover {
+    padding: 0.1rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #56a7f2, #468aca);
+}
+
+footer .social-fields-facebook {
+    background: linear-gradient(to right, #3b5998, #2a4374);
+    transition: all 0.3s ease;
+}
+
+footer .social-fields-facebook:hover {
+    padding: 0.1rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #3b5998, #2a4374);
+}
+
+footer .social-fields-google {
+    background: linear-gradient(to right, var(--main-color-once), var(--main-color-twice));
+    transition: all 0.3s ease;
+}
+
+footer .social-fields-google:hover {
+    padding: 0.1rem;
+    background: linear-gradient(to left, var(--main-color-once), var(--main-color-twice));
+    letter-spacing: 0.5px;
 }
