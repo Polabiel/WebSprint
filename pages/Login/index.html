@@ -5,24 +5,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Página de Login</title>
 </head>
 
 <body>
     <section>
-        <h2>Login</h2>
-        <div class="box-user">
+        <form class="box-user">
+            <h2 id="title">Login</h2>
             <div class="input">
                 <label for="email"></label>
-                <input type="text" name="email-box" id="email-box" placeholder="Digite seu email" />
+                <input type="email" name="email-box" id="email-box" placeholder="Digite seu email" autocomplete="off" required  />
             </div>
             <div class="input">
                 <label for="password"></label>
-                <input type="password" name="password-box" id="password-box" placeholder="Digite sua senha" />
+                <input type="password" name="password-box" id="password-box" placeholder="Digite sua senha" autocomplete="off" required />
+                <input id="forgot" type="submit" value="Esqueceu a senha?" onclick="alertMessage()" />
             </div>
-        </div>
+            <div class="acc">
+                <a href="https://www.google.com.br"><i class="fa-brands fa-google"></i></a>
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.discord.gg"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.twitch.com"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Entrar" onclick="alertMessage()" />
+            </div>
+        </form>
     </section>
+    <footer>
+        <p>Criado por <span><a href="#">Gabriel Oliveira</a></span></p>
+    </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
